@@ -19,7 +19,7 @@ const app = express();
 
 // db
 mongoose
-    .connect('mongodb+srv://digoyb:5927RTyb@cluster0-6cr1o.mongodb.net/test?retryWrites=true&w=majority', {
+    .connect('mongodb+srv://llaalal<password>@cluster0-6cr1o.mongodb.net/test?retryWrites=true&w=majority', {
         useNewUrlParser: true,
         useCreateIndex: true
     })
