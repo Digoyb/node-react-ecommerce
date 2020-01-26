@@ -40,7 +40,7 @@ const Signup = () => {
     const signUpForm = () => (
         <form>
             <div className="form-group">
-                <label className="text-muted">Name</label>
+                <label className="text-muted">Nome</label>
                 <input onChange={handleChange('name')} type="text" className="form-control" value={name} />
             </div>
 
@@ -50,11 +50,11 @@ const Signup = () => {
             </div>
 
             <div className="form-group">
-                <label className="text-muted">Password</label>
+                <label className="text-muted">Senha</label>
                 <input onChange={handleChange('password')} type="password" className="form-control" value={password} />
             </div>
             <button onClick={clickSubmit} className="btn btn-primary">
-                Submit
+                Enviar
             </button>
         </form>
     );
@@ -67,7 +67,7 @@ const Signup = () => {
 
     const showSuccess = () => (
         <div className="alert alert-info" style={{ display: success ? '' : 'none' }}>
-            New account is created. Please <Link to="/signin">Signin</Link>
+            Nova conta criada. Por favor <Link to="/signin">Acesse</Link>
         </div>
     );
 

@@ -107,7 +107,7 @@ const UpdateProduct = ({ match }) => {
 
     const newPostForm = () => (
         <form className="mb-3" onSubmit={clickSubmit}>
-            <h4>Post Photo</h4>
+            <h4>Postar Foto</h4>
             <div className="form-group">
                 <label className="btn btn-secondary">
                     <input onChange={handleChange('photo')} type="file" name="photo" accept="image/*" />
@@ -115,24 +115,24 @@ const UpdateProduct = ({ match }) => {
             </div>
 
             <div className="form-group">
-                <label className="text-muted">Name</label>
+                <label className="text-muted">Nome</label>
                 <input onChange={handleChange('name')} type="text" className="form-control" value={name} />
             </div>
 
             <div className="form-group">
-                <label className="text-muted">Description</label>
+                <label className="text-muted">Descrição</label>
                 <textarea onChange={handleChange('description')} className="form-control" value={description} />
             </div>
 
             <div className="form-group">
-                <label className="text-muted">Price</label>
+                <label className="text-muted">Preço</label>
                 <input onChange={handleChange('price')} type="number" className="form-control" value={price} />
             </div>
 
             <div className="form-group">
-                <label className="text-muted">Category</label>
+                <label className="text-muted">Categoria</label>
                 <select onChange={handleChange('category')} className="form-control">
-                    <option>Please select</option>
+                    <option>Por favor selecione</option>
                     {categories &&
                         categories.map((c, i) => (
                             <option key={i} value={c._id}>
@@ -143,20 +143,20 @@ const UpdateProduct = ({ match }) => {
             </div>
 
             <div className="form-group">
-                <label className="text-muted">Shipping</label>
+                <label className="text-muted">Envio</label>
                 <select onChange={handleChange('shipping')} className="form-control">
-                    <option>Please select</option>
-                    <option value="0">No</option>
-                    <option value="1">Yes</option>
+                    <option>Selecione</option>
+                    <option value="0">Não</option>
+                    <option value="1">Sim</option>
                 </select>
             </div>
 
             <div className="form-group">
-                <label className="text-muted">Quantity</label>
+                <label className="text-muted">Quantidade</label>
                 <input onChange={handleChange('quantity')} type="number" className="form-control" value={quantity} />
             </div>
 
-            <button className="btn btn-outline-primary">Update Product</button>
+            <button className="btn btn-outline-primary">Atualizar Produto</button>
         </form>
     );
 
@@ -168,14 +168,14 @@ const UpdateProduct = ({ match }) => {
 
     const showSuccess = () => (
         <div className="alert alert-info" style={{ display: createdProduct ? '' : 'none' }}>
-            <h2>{`${createdProduct}`} is updated!</h2>
+            <h2>{`${createdProduct}`} foi atualizado!</h2>
         </div>
     );
 
     const showLoading = () =>
         loading && (
             <div className="alert alert-success">
-                <h2>Loading...</h2>
+                <h2>Carregando...</h2>
             </div>
         );
 
@@ -188,7 +188,7 @@ const UpdateProduct = ({ match }) => {
     };
 
     return (
-        <Layout title="Add a new product" description={`G'day ${user.name}, ready to add a new product?`}>
+        <Layout title="Adicionar novo produto" description={`Bom dia ${user.name}, produto para adicionar novo produto?`}>
             <div className="row">
                 <div className="col-md-8 offset-md-2">
                     {showLoading()}

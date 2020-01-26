@@ -40,11 +40,11 @@ const Orders = () => {
         if (orders.length > 0) {
             return (
                 <h1 className="text-danger display-2">
-                    Total orders: {orders.length}
+                    Total de pedidos: {orders.length}
                 </h1>
             );
         } else {
-            return <h1 className="text-danger">No orders</h1>;
+            return <h1 className="text-danger">Sem pedidos</h1>;
         }
     };
 
@@ -81,7 +81,7 @@ const Orders = () => {
                 className="form-control"
                 onChange={e => handleStatusChange(e, o._id)}
             >
-                <option>Update Status</option>
+                <option>Atualizar Status</option>
                 {statusValues.map((status, index) => (
                     <option key={index} value={status}>
                         {status}
@@ -94,9 +94,9 @@ const Orders = () => {
     return (
         <Layout
             title="Orders"
-            description={`G'day ${
+            description={`Bom dia ${
                 user.name
-            }, you can manage all the orders here`}
+            }, você pode gerenciar todos os produtos`}
             className="container-fluid"
         >
             <div className="row">
@@ -112,7 +112,7 @@ const Orders = () => {
                             >
                                 <h2 className="mb-5">
                                     <span className="bg-primary">
-                                        Order ID: {o._id}
+                                        ID da ordem: {o._id}
                                     </span>
                                 </h2>
 
@@ -121,25 +121,25 @@ const Orders = () => {
                                         {showStatus(o)}
                                     </li>
                                     <li className="list-group-item">
-                                        Transaction ID: {o.transaction_id}
+                                        ID da transição: {o.transaction_id}
                                     </li>
                                     <li className="list-group-item">
-                                        Amount: ${o.amount}
+                                        Quantidade: ${o.amount}
                                     </li>
                                     <li className="list-group-item">
-                                        Ordered by: {o.user.name}
+                                        Ordenado por: {o.user.name}
                                     </li>
                                     <li className="list-group-item">
-                                        Ordered on:{" "}
+                                        Pedido em:{" "}
                                         {moment(o.createdAt).fromNow()}
                                     </li>
                                     <li className="list-group-item">
-                                        Delivery address: {o.address}
+                                        Endereço de entrega: {o.address}
                                     </li>
                                 </ul>
 
                                 <h3 className="mt-4 mb-4 font-italic">
-                                    Total products in the order:{" "}
+                                    Total de produtos em ordem:{" "}
                                     {o.products.length}
                                 </h3>
 

@@ -51,7 +51,7 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
             <div>{showDropIn()}</div>
         ) : (
             <Link to="/signin">
-                <button className="btn btn-primary">Sign in to checkout</button>
+                <button className="btn btn-primary">Faça o login para o checkout</button>
             </Link>
         );
     };
@@ -125,12 +125,12 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
             {data.clientToken !== null && products.length > 0 ? (
                 <div>
                     <div className="gorm-group mb-3">
-                        <label className="text-muted">Delivery address:</label>
+                        <label className="text-muted">Endereço de Entrega:</label>
                         <textarea
                             onChange={handleAddress}
                             className="form-control"
                             value={data.address}
-                            placeholder="Type your delivery address here..."
+                            placeholder="Escreva seu endereço..."
                         />
                     </div>
 
@@ -159,11 +159,11 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
 
     const showSuccess = success => (
         <div className="alert alert-info" style={{ display: success ? '' : 'none' }}>
-            Thanks! Your payment was successful!
+            Obrigado! Foi pagamento ocorreu com sucesso!
         </div>
     );
 
-    const showLoading = loading => loading && <h2 className="text-danger">Loading...</h2>;
+    const showLoading = loading => loading && <h2 className="text-danger">Carregando...</h2>;
 
     return (
         <div>

@@ -16,7 +16,7 @@ const Cart = () => {
     const showItems = items => {
         return (
             <div>
-                <h2>Your cart has {`${items.length}`} items</h2>
+                <h2>Seu carrinho tem {`${items.length}`} items</h2>
                 <hr />
                 {items.map((product, i) => (
                     <Card
@@ -35,21 +35,21 @@ const Cart = () => {
 
     const noItemsMessage = () => (
         <h2>
-            Your cart is empty. <br /> <Link to="/shop">Continue shopping</Link>
+            Seu carrinho está vazio. <br /> <Link to="/shop">Continue comprando</Link>
         </h2>
     );
 
     return (
         <Layout
-            title="Shopping Cart"
-            description="Manage your cart items. Add remove checkout or continue shopping."
+            title="Carrinho de Compras"
+            description="Gerencie seus items do carrinho. Adicione, remova ou continue comprando."
             className="container-fluid"
         >
             <div className="row">
                 <div className="col-6">{items.length > 0 ? showItems(items) : noItemsMessage()}</div>
 
                 <div className="col-6">
-                    <h2 className="mb-4">Your cart summary</h2>
+                    <h2 className="mb-4">Seu resumo de carrinho</h2>
                     <hr />
                     <Checkout products={items} setRun={setRun} run={run} />
                 </div>

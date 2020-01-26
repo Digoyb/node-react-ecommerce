@@ -58,7 +58,7 @@ const Signin = () => {
                 />
             </div>
             <button onClick={clickSubmit} className="btn btn-primary">
-                Submit
+                Enviar
             </button>
         </form>
     );
@@ -75,7 +75,7 @@ const Signin = () => {
     const showLoading = () =>
         loading && (
             <div className="alert alert-info">
-                <h2>Loading...</h2>
+                <h2>Carregando...</h2>
             </div>
         );
 

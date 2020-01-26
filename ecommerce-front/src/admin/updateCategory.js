@@ -3,8 +3,7 @@ import Layout from '../core/Layout';
 import { isAuthenticated } from '../auth';
 import { Link, Redirect } from 'react-router-dom';
 import { getCategory, updateCategory } from './apiAdmin';
-// {category: ["5cd0258f2793ec6e100bc191"], price: []}
-// http://localhost:3000/admin/category/update/5cd0258f2793ec6e100bc191
+
 const UpdateCategory = ({ match }) => {
     const [values, setValues] = useState({
         name: '',
@@ -63,8 +62,8 @@ const UpdateCategory = ({ match }) => {
     const updateCategoryForm = () => (
         <div className="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
             <form className="mb-5" onSubmit={submitCategoryForm}>
-                <span className="login100-form-title p-b-32 m-b-7">Update Category Form</span>
-                <span className="txt1 p-b-11">Category Name</span>
+                <span className="login100-form-title p-b-32 m-b-7">Atualize a Categoria do formulário</span>
+                <span className="txt1 p-b-11">Nome da Categoria</span>
                 <br />
                 <br />
                 <div className="wrap-input100 validate-input m-b-36">
@@ -79,7 +78,7 @@ const UpdateCategory = ({ match }) => {
                 </div>
                 <div className="w-size25">
                     <button type="submit" className="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
-                        Save Changes
+                        Salvar alterações
                     </button>
                 </div>
             </form>
@@ -107,7 +106,7 @@ const UpdateCategory = ({ match }) => {
         return (
             <div className="mt-5">
                 <Link to="/admin/categories" className="text-info">
-                    Back To Admin Home
+                    Voltar para Home do admin
                 </Link>
             </div>
         );
@@ -116,7 +115,7 @@ const UpdateCategory = ({ match }) => {
     return (
         <Layout
             title={`Hi ${user.name}`}
-            description={`This is Update Product Action Page`}
+            description={`Página de atualização de produtos`}
             className="container-fluid"
         >
             <div className="row">

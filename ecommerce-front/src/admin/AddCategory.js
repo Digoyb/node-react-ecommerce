@@ -35,7 +35,7 @@ const AddCategory = () => {
     const newCategoryFom = () => (
         <form onSubmit={clickSubmit}>
             <div className="form-group">
-                <label className="text-muted">Name</label>
+                <label className="text-muted">Nome</label>
                 <input
                     type="text"
                     className="form-control"
@@ -45,26 +45,26 @@ const AddCategory = () => {
                     required
                 />
             </div>
-            <button className="btn btn-outline-primary">Create Category</button>
+            <button className="btn btn-outline-primary">Criar Categoria</button>
         </form>
     );
 
     const showSuccess = () => {
         if (success) {
-            return <h3 className="text-success">{name} is created</h3>;
+            return <h3 className="text-success">{name} foi criada.</h3>;
         }
     };
 
     const showError = () => {
         if (error) {
-            return <h3 className="text-danger">Category should be unique</h3>;
+            return <h3 className="text-danger">Categoria deve ser única!</h3>;
         }
     };
 
     const goBack = () => (
         <div className="mt-5">
             <Link to="/admin/dashboard" className="text-warning">
-                Back to Dashboard
+                Voltar para Resumo
             </Link>
         </div>
     );

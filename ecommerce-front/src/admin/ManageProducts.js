@@ -35,14 +35,14 @@ const ManageProducts = () => {
 
     return (
         <Layout
-            title="Manage Products"
-            description="Perform CRUD on products"
+            title="Gerenciar Produtos"
+            description="crud em produtos"
             className="container-fluid"
         >
             <div className="row">
                 <div className="col-12">
                     <h2 className="text-center">
-                        Total {products.length} products
+                        Total {products.length} produtos
                     </h2>
                     <hr />
                     <ul className="list-group">
@@ -54,14 +54,14 @@ const ManageProducts = () => {
                                 <strong>{p.name}</strong>
                                 <Link to={`/admin/product/update/${p._id}`}>
                                     <span className="badge badge-warning badge-pill">
-                                        Update
+                                        Atualizar
                                     </span>
                                 </Link>
                                 <span
                                     onClick={() => destroy(p._id)}
                                     className="badge badge-danger badge-pill"
                                 >
-                                    Delete
+                                    Deletar
                                 </span>
                             </li>
                         ))}

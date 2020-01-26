@@ -30,16 +30,16 @@ const Dashboard = () => {
     const userLinks = () => {
         return (
             <div className="card">
-                <h4 className="card-header">User Links</h4>
+                <h4 className="card-header">Links do Usuário</h4>
                 <ul className="list-group">
                     <li className="list-group-item">
                         <Link className="nav-link" to="/cart">
-                            My Cart
+                            Meu Carrinho
                         </Link>
                     </li>
                     <li className="list-group-item">
                         <Link className="nav-link" to={`/profile/${_id}`}>
-                            Update Profile
+                            Atualizar Cadastro
                         </Link>
                     </li>
                 </ul>

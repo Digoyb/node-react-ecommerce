@@ -19,7 +19,7 @@
     background: #000;
 }
 /**
- * single product page - product name
+ * produto unico - nome do produto
  */
 
 .name {
@@ -28,7 +28,7 @@
     font-weight: bold;
 }
 
-/* black shade form 10-1 */
+/* sombra form 10-1 */
 .black-10 {
     background: #f2f2f2;
 }
@@ -49,7 +49,7 @@
 }
 
 /**
- * product image on card
+ * imagem do produto no card
  */
 
 .product-img {

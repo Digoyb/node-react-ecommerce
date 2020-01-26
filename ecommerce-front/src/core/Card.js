@@ -21,7 +21,7 @@ const Card = ({
     return (
       showViewProductButton && (
         <Link to={`/product/${product._id}`} className="mr-2">
-          <button className="btn btn-outline-primary mt-2 mb-2 card-btn-1">View Product</button>
+          <button className="btn btn-outline-primary mt-2 mb-2 card-btn-1">Ver Produto</button>
         </Link>
       )
     );
@@ -49,9 +49,9 @@ const Card = ({
 
   const showStock = quantity => {
     return quantity > 0 ? (
-      <span className="badge badge-primary badge-pill">In Stock </span>
+      <span className="badge badge-primary badge-pill">Em Estoque </span>
     ) : (
-      <span className="badge badge-primary badge-pill">Out of Stock </span>
+      <span className="badge badge-primary badge-pill">Fora de Estoque </span>
     );
   };
 
@@ -69,7 +69,7 @@ const Card = ({
         <div>
           <div className="input-group mb-3">
             <div className="input-group-prepend">
-              <span className="input-group-text">Adjust Quantity</span>
+              <span className="input-group-text">Ajustar Quantidade</span>
             </div>
             <input type="number" className="form-control" value={count} onChange={handleChange(product._id)} />
           </div>
@@ -100,8 +100,8 @@ const Card = ({
         <ShowImage item={product} url="product" />
         <p className="card-p  mt-2">{product.description.substring(0, 100)} </p>
         <p className="card-p black-10">$ {product.price}</p>
-        <p className="black-9">Category: {product.category && product.category.name}</p>
-        <p className="black-8">Added on {moment(product.createdAt).fromNow()}</p>
+        <p className="black-9">Categoria: {product.category && product.category.name}</p>
+        <p className="black-8">Adicionado em {moment(product.createdAt).fromNow()}</p>
         {showStock(product.quantity)}
         <br />
 

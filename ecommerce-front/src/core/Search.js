@@ -53,10 +53,10 @@ const Search = () => {
 
     const searchMessage = (searched, results) => {
         if (searched && results.length > 0) {
-            return `Found ${results.length} products`;
+            return `${results.length} produtos encontrados`;
         }
         if (searched && results.length < 1) {
-            return `No products found`;
+            return `Nenhum produto encontrado`;
         }
     };
 
@@ -87,7 +87,7 @@ const Search = () => {
                             className="btn mr-2"
                             onChange={handleChange("category")}
                         >
-                            <option value="All">All</option>
+                            <option value="All">Todos</option>
                             {categories.map((c, i) => (
                                 <option key={i} value={c._id}>
                                     {c.name}
@@ -100,14 +100,14 @@ const Search = () => {
                         type="search"
                         className="form-control"
                         onChange={handleChange("search")}
-                        placeholder="Search by name"
+                        placeholder="Procure pelo nome"
                     />
                 </div>
                 <div
                     className="btn input-group-append"
                     style={{ border: "none" }}
                 >
-                    <button className="input-group-text">Search</button>
+                    <button className="input-group-text">Procurar</button>
                 </div>
             </span>
         </form>

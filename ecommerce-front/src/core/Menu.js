@@ -30,7 +30,7 @@ const Menu = ({ history }) => (
                     style={isActive(history, "/shop")}
                     to="/shop"
                 >
-                    Shop
+                    Shopping
                 </Link>
             </li>
 
@@ -54,7 +54,7 @@ const Menu = ({ history }) => (
                         style={isActive(history, "/user/dashboard")}
                         to="/user/dashboard"
                     >
-                        Dashboard
+                        Resumo
                     </Link>
                 </li>
             )}
@@ -66,7 +66,7 @@ const Menu = ({ history }) => (
                         style={isActive(history, "/admin/dashboard")}
                         to="/admin/dashboard"
                     >
-                        Dashboard
+                        Resumo
                     </Link>
                 </li>
             )}
@@ -79,7 +79,7 @@ const Menu = ({ history }) => (
                             style={isActive(history, "/signin")}
                             to="/signin"
                         >
-                            Signin
+                            Acessar
                         </Link>
                     </li>
 
@@ -89,7 +89,7 @@ const Menu = ({ history }) => (
                             style={isActive(history, "/signup")}
                             to="/signup"
                         >
-                            Signup
+                            Cadastre-se
                         </Link>
                     </li>
                 </Fragment>
@@ -106,7 +106,7 @@ const Menu = ({ history }) => (
                             })
                         }
                     >
-                        Signout
+                        Sair
                     </span>
                 </li>
             )}
