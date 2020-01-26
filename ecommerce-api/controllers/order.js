@@ -33,14 +33,14 @@ exports.create = (req, res) => {
         // order.products.length
         // order.amount
         const emailData = {
-            to: 'kaloraat@gmail.com',
+            to: 'dadad@adada.adadad',
             from: 'noreply@ecommerce.com',
-            subject: `A new order is received`,
+            subject: `Novo pedido selecionado.`,
             html: `
-            <p>Customer name:</p>
-            <p>Total products: ${order.products.length}</p>
-            <p>Total cost: ${order.amount}</p>
-            <p>Login to dashboard to the order in detail.</p>
+            <p>Nome do Cliente:</p>
+            <p>Total de Produtos: ${order.products.length}</p>
+            <p>Valor Total: ${order.amount}</p>
+            <p>Faça o login para maiores informações.</p>
         `
         };
         sgMail.send(emailData);

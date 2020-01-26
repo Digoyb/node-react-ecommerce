@@ -96,8 +96,3 @@ exports.isAdmin = (req, res, next) => {
     }
     next();
 };
-
-/**
- * google login full
- * https://www.udemy.com/instructor/communication/qa/7520556/detail/
- */
